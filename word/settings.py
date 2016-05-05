@@ -14,10 +14,13 @@ BOT_NAME = 'word'
 SPIDER_MODULES = ['word.spiders']
 NEWSPIDER_MODULE = 'word.spiders'
 
+# SPIDER_MIDDLEWARES  = {
+#     "word.middleware.CookiesMiddleware": 402,
+# }
+
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'word (+http://www.yourdomain.com)'
-
+USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2652.2 Safari/537.36'
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS=32
 
@@ -36,10 +39,18 @@ NEWSPIDER_MODULE = 'word.spiders'
 #TELNETCONSOLE_ENABLED=False
 
 # Override the default request headers:
-#DEFAULT_REQUEST_HEADERS = {
-#   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-#   'Accept-Language': 'en',
-#}
+DEFAULT_REQUEST_HEADERS = {
+    'Accept':'*/*',
+    'Accept-Encoding':'gzip, deflate',
+    'Accept-Language':'zh-CN,zh;q=0.8',
+    'Connection':'keep-alive',
+    'Content-Length':'822',
+    'Content-Type':'application/x-www-form-urlencoded',
+    'Host':'fengchao.baidu.com',
+    'Origin':'http://fengchao.baidu.com',
+    'Referer':'http://fengchao.baidu.com/nirvana/main.html?userid=10270352',
+
+}
 
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
